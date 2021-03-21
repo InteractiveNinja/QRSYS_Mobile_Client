@@ -1,12 +1,13 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import './index.css';
-import App from './App';
+import ListDevices from './ListDevices';
 import reportWebVitals from './reportWebVitals';
+import SendDevice from './SendDevice';
 
 ReactDOM.render(
   <React.StrictMode>
-    <App />
+    <ListDevices />
+    <SendDevice></SendDevice>
   </React.StrictMode>,
   document.getElementById('root')
 );
