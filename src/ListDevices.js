@@ -13,9 +13,10 @@ class ListDevices extends Component {
   };
 
   listUserSockets = () => {
-    let server = new WebSocket("ws://192.168.1.117:8080")
+    let server = new WebSocket("ws://localhost:8080")
     server.onopen = () => {
-      server.send(JSON.stringify({ type: "list", value: this.state.userid }))
+      //Hier muss der Login Hash noch Implementiert werden
+      server.send(JSON.stringify({ type: "list",hash:"hier lel", value: this.state.userid }))
 
       server.onmessage = (data) => {
         console.log(data.data)
